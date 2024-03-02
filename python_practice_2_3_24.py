@@ -1,11 +1,17 @@
-#  This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
+# Function that calculates the points accumilated by football team over a season 
 
+def points(games):
+    points = 0
+    for game in games:
+        x , y = game.split(':')
+        x = int(x)
+        y = int(y)
+        if x > y:
+            points += 3
+        elif x < y:
+            continue
+        else:
+            points += 1
+    return points
 
-def simple_multiplication(number) :
-    if number % 2 == 0:
-        sum = number * 8
-    else:
-        sum = number * 9
-    return sum
-
-print(simple_multiplication(11))
+print(points(['1:0','2:0','3:0','4:0','2:1','3:1','4:1','3:2','4:2','4:3']))
