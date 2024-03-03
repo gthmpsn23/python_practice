@@ -29,20 +29,41 @@
 
 # You only need one - Beginner
 
-# You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
+# def check(seq, elem):
+#     for i in seq:
+#         if i == elem:
+#             return True
+#     return False
 
-# Array can contain numbers or strings. X can be either.
+# print(check([66, 101], 66))
 
-# Return true if the array contains the value, false if not.
+# def reverse_seq(n):
+#     return list(range(n, 0, -12))
+    
+# print(reverse_seq(100))
 
-def check(seq, elem):
-    for i in seq:
-        if i == elem:
-            return True
-    return False
+# If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. 
+# The sum of these multiples is 23.
 
-print(check([66, 101], 66))
+# Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
 
+# Additionally, if the number is negative, return 0.
+
+# Note: If the number is a multiple of both 3 and 5, only count it once.
+
+# Courtesy of projecteuler.net (Problem 1)
+
+def solution(number):
+    if number < 0:
+        return 0  # Return 0 if the number is negative
+
+    count = 0  # Initialize count as an integer for summing
+    for i in range(number):  # Use range(number) to iterate up to, but not including, 'number'
+        if i % 5 == 0 or i % 3 == 0:  # Check if divisible by 5 or 3
+            count += i  # Add the number to the total count
+    return count
+
+print(solution(200))
 
 
 
