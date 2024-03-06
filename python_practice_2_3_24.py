@@ -53,25 +53,41 @@
 
 # Courtesy of projecteuler.net (Problem 1)
 
-def solution(number):
-    if number < 0:
-        return 0  # Return 0 if the number is negative
+# def solution(number):
+#     if number < 0:
+#         return 0  # Return 0 if the number is negative
 
-    count = 0  # Initialize count as an integer for summing
-    for i in range(number):  # Use range(number) to iterate up to, but not including, 'number'
-        if i % 5 == 0 or i % 3 == 0:  # Check if divisible by 5 or 3
-            count += i  # Add the number to the total count
-    return count
+#     count = 0  # Initialize count as an integer for summing
+#     for i in range(number):  # Use range(number) to iterate up to, but not including, 'number'
+#         if i % 5 == 0 or i % 3 == 0:  # Check if divisible by 5 or 3
+#             count += i  # Add the number to the total count
+#     return count
 
-print(solution(200))
+# print(solution(200))
+
+# def generate_hashtag(s):
+#     # Step 1: Trim leading/trailing spaces and split into words
+#     words = s.strip().split()
+    
+#     # Step 2: Capitalize the first letter of each word and concatenate
+#     hashtag = '#' + ''.join(word.capitalize() for word in words)
+    
+#     # Step 3 & 4: Check if the result meets the criteria
+#     if 1 < len(hashtag) <= 140:
+#         return hashtag
+#     else:
+#         return False
 
 
+# print(generate_hashtag(" Hello there thanks for trying my Kata"))  # "#HelloThereThanksForTryingMyKata"
+# print(generate_hashtag("    Hello     World   "))  # "#HelloWorld"
+# print(generate_hashtag(""))  # False
 
+def create_phone_number(n):
+    return "({}{}{}) {}{}{}-{}{}{}{}".format(*n)
 
-
-
-
-
+# Example usage
+print(create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))  # => returns "(123) 456-7890"
 
 
 
