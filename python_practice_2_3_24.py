@@ -138,19 +138,44 @@
 # else:
 #     print("Invalid choice")
 
-""" Given an array of integers, return a new array with each value doubled.
+# """ Given an array of integers, return a new array with each value doubled.
 
-For example:
+# For example:
 
-[1, 2, 3] --> [2, 4, 6]"""
+# [1, 2, 3] --> [2, 4, 6]"""
 
-def maps(a):
-    doubled = []
-    for i in a:
-        doubled.append(i * 2)
-    return doubled
+# def maps(a):
+#     doubled = []
+#     for i in a:
+#         doubled.append(i * 2)
+#     return doubled
     
-print(maps([1,2,3]))
-        
+# print(maps([1,2,3]))
+
+
+""" Trolls are attacking your comment section!
+
+A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
+
+Your task is to write a function that takes a string and return a new string with all vowels removed.
+
+For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+
+Note: for this kata y isn't considered a vowel."""        
+
+# def disemvowel(string_):
+#     new_string = ""
+#     for letter in range(len(string_)):
+#         if letter == "aeiou":
+#             remove
+#     return string_
     
+def disemvowel(string_):
+    new_string = ""
+    for letter in string_:  # Iterate over characters directly
+        if letter.lower() not in "aeiou":  # Check if the letter is not a vowel (consider case)
+            new_string += letter  # Add non-vowel characters to the new string
+    return new_string
+
+print(disemvowel("You're a cunt!"))
 
