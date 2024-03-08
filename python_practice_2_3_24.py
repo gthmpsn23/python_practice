@@ -83,11 +83,74 @@
 # print(generate_hashtag("    Hello     World   "))  # "#HelloWorld"
 # print(generate_hashtag(""))  # False
 
-def create_phone_number(n):
-    return "({}{}{}) {}{}{}-{}{}{}{}".format(*n)
+# def create_phone_number(n):
+#     return "({}{}{}) {}{}{}-{}{}{}{}".format(*n)
 
-# Example usage
-print(create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))  # => returns "(123) 456-7890"
+# # Example usage
+# print(create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))  # => returns "(123) 456-7890"
 
+# def reverse_words(text):
+#   return text[::-1]
 
+# print(reverse_words("double  spaced  words"))
+
+# def divide(num1, num2):
+#     return num1/num2
+
+# num1 = int(input("Please enter a number: "))
+# num2 = int(input("Please enter a number: "))
+
+# print(divide(num1,num2))
+
+# def divide(num1, num2):
+#     result = 0
+#     try:
+#         result = num1/num2
+#     except ZeroDivisionError:
+#         print("Don't divide by zero dickhead!")
+#     return result
+
+# num1 = int(input("Please enter a number: "))
+# num2 = int(input("Please enter a number: "))
+# result = divide(num1,num2)
+# print(result)
+
+# def validate_num_input(user_input):
+#     try:
+#         user_input = int(user_input)
+#     except ValueError:
+#         print("Invalid input")
+#         return None
+#     else:
+#         return user_input
+    
+# names = ["Mike", "Peter", "Michelle", "Tina"]
+
+# print("Please choose a name below:")
+# for i, name in enumerate(names):
+#     print(i, name, sep=". ")
+
+# user_choice = input(": ")
+# user_choice = validate_num_input(user_choice)
+
+# if isinstance(user_choice, int) and 0 <= user_choice < len(names):
+#     print(f"Selected Name: {names[user_choice]}")
+# else:
+#     print("Invalid choice")
+
+""" Given an array of integers, return a new array with each value doubled.
+
+For example:
+
+[1, 2, 3] --> [2, 4, 6]"""
+
+def maps(a):
+    doubled = []
+    for i in a:
+        doubled.append(i * 2)
+    return doubled
+    
+print(maps([1,2,3]))
+        
+    
 
