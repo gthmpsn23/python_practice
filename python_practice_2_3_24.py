@@ -222,13 +222,25 @@ Note: for this kata y isn't considered a vowel."""
 #         test.assert_equals(twice_as_old(29,0) , 29)
 
 
-def twice_as_old(dad_years_old, son_years_old):
-    twice = son_years_old * 2 
-    years = dad_years_old - twice
-    if years < 0:
-        years = abs(years)
-    return years
+# def twice_as_old(dad_years_old, son_years_old):
+#     twice = son_years_old * 2 
+#     years = dad_years_old - twice
+#     if years < 0:
+#         years = abs(years)
+#     return years
 
-print(twice_as_old(55,30))
+# print(twice_as_old(55,30))
 
+def quarter_of(month):
+    if 1 <= month <= 3:
+        q = 1
+    elif 4 <= month <= 6:
+        q = 2
+    elif 7 <= month <= 9:
+        q = 3
+    else:
+        q = 4
+    return q
+
+print(quarter_of(11))
     
