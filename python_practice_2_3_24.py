@@ -231,16 +231,23 @@ Note: for this kata y isn't considered a vowel."""
 
 # print(twice_as_old(55,30))
 
-def quarter_of(month):
-    if 1 <= month <= 3:
-        q = 1
-    elif 4 <= month <= 6:
-        q = 2
-    elif 7 <= month <= 9:
-        q = 3
-    else:
-        q = 4
-    return q
+# def quarter_of(month):
+#     if 1 <= month <= 3:
+#         q = 1
+#     elif 4 <= month <= 6:
+#         q = 2
+#     elif 7 <= month <= 9:
+#         q = 3
+#     else:
+#         q = 4
+#     return q
 
-print(quarter_of(11))
-    
+# print(quarter_of(11))
+
+def count(s):
+    freq = {}
+    for c in set(s):
+        freq[c] = s.count(c)
+    return freq
+
+print(count(""))
