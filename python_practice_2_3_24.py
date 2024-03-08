@@ -170,12 +170,65 @@ Note: for this kata y isn't considered a vowel."""
 #             remove
 #     return string_
     
-def disemvowel(string_):
-    new_string = ""
-    for letter in string_:  # Iterate over characters directly
-        if letter.lower() not in "aeiou":  # Check if the letter is not a vowel (consider case)
-            new_string += letter  # Add non-vowel characters to the new string
-    return new_string
+# def disemvowel(string_):
+#     new_string = ""
+#     for letter in string_:  # Iterate over characters directly
+#         if letter.lower() not in "aeiou":  # Check if the letter is not a vowel (consider case)
+#             new_string += letter  # Add non-vowel characters to the new string
+#     return new_string
 
-print(disemvowel("You're a cunt!"))
+# print(disemvowel("You're a cunt!"))
 
+# def double_char(s):
+#     new_string = ""
+#     for letter in s:
+#         new_string += letter
+#         new_string += letter
+#     return new_string
+
+# print(double_char("cunt"))
+
+
+# def find_average(numbers):
+#     sum = 0
+#     count = 0
+#     for number in numbers:
+#         sum += number
+#         count += 1
+
+#     try:   
+#         average = sum / count
+#     except ZeroDivisionError:
+#         return 0    
+    
+#     return average
+
+# print(find_average([0]))
+
+# numbers = [1,4,5,7,3,2,5532234]
+# sum(numbers)
+# print(sum(numbers))
+# len(numbers)
+# print(len(numbers))
+
+# average = sum(numbers) / len(numbers)
+
+# print(average)
+
+#         test.assert_equals(twice_as_old(36,7) , 22)
+#         test.assert_equals(twice_as_old(55,30) , 5)
+#         test.assert_equals(twice_as_old(42,21) , 0)
+#         test.assert_equals(twice_as_old(22,1) , 20)
+#         test.assert_equals(twice_as_old(29,0) , 29)
+
+
+def twice_as_old(dad_years_old, son_years_old):
+    twice = son_years_old * 2 
+    years = dad_years_old - twice
+    if years < 0:
+        years = abs(years)
+    return years
+
+print(twice_as_old(55,30))
+
+    
