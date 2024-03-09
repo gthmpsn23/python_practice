@@ -153,15 +153,15 @@
 # print(maps([1,2,3]))
 
 
-""" Trolls are attacking your comment section!
+# """ Trolls are attacking your comment section!
 
-A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
+# A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
 
-Your task is to write a function that takes a string and return a new string with all vowels removed.
+# Your task is to write a function that takes a string and return a new string with all vowels removed.
 
-For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+# For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
 
-Note: for this kata y isn't considered a vowel."""        
+# Note: for this kata y isn't considered a vowel."""        
 
 # def disemvowel(string_):
 #     new_string = ""
@@ -244,10 +244,29 @@ Note: for this kata y isn't considered a vowel."""
 
 # print(quarter_of(11))
 
-def count(s):
-    freq = {}
-    for c in set(s):
-        freq[c] = s.count(c)
-    return freq
+# def count(s):
+#     freq = {}
+#     for c in set(s):
+#         freq[c] = s.count(c)
+#     return freq
 
-print(count(""))
+# print(count(""))
+
+
+# def disemvowel(string_):
+#     new_string = ""
+#     for letter in string_:  # Iterate over characters directly
+#         if letter.lower() not in "aeiou":  # Check if the letter is not a vowel (consider case)
+#             new_string += letter  # Add non-vowel characters to the new string
+#     return new_string
+
+def is_pangram(s):
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    for char in alphabet:
+        if char not in s.lower():
+            return False
+
+    return True
+
+print(is_pangram("abcdefghi"))
+
